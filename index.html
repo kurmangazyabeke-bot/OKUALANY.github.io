@@ -26,7 +26,7 @@ header .logo p {margin:0; font-size:14px; opacity:0.8;}
 .hero-left {max-width:50%;}
 .hero-left h2 {font-size:32px; margin-bottom:20px; line-height:1.4;}
 .hero-left p {font-size:18px; margin-bottom:25px; font-style:italic; color:#111;}
-.hero-right img {width:400px; border-radius:15px;} /* увеличили баннер */
+.hero-right img {width:400px; border-radius:15px;} 
 
 /* Кнопка GO */
 .go-btn {
@@ -92,6 +92,80 @@ header .logo p {margin:0; font-size:14px; opacity:0.8;}
 .progress-bar-fill {height:100%; width:0; border-radius:10px; transition: width 1s ease-in-out, background 0.5s;}
 .green {background:#16a34a;}
 .yellow {background:#facc15;}
+
+/* ---- Мобильная адаптация ---- */
+@media (max-width: 768px) {
+
+  /* Навбар */
+  header.navbar ul {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .hero-left h2 {
+    font-size: 22px;
+  }
+
+  .hero-left p {
+    font-size: 16px;
+  }
+
+  .hero-right img {
+    width: 90%;
+    margin-top: 15px;
+  }
+
+  /* Уровни */
+  .levels {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .level-card {
+    width: 90%;
+  }
+
+  /* Мини-секции */
+  .features {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .feature-card {
+    width: 100%;
+    min-width: unset;
+  }
+
+  /* CTA секция */
+  .cta-section {
+    padding: 40px 15px !important;
+  }
+
+  .cta-section h2 {
+    font-size: 1.6rem !important;
+  }
+
+  /* Футер */
+  footer > div {
+    grid-template-columns: 1fr !important;
+  }
+
+  footer {
+    padding: 40px 15px !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -144,19 +218,16 @@ header .logo p {margin:0; font-size:14px; opacity:0.8;}
 
 </main>
 
-<!-- Обновлённый футер с CTA -->
-<!-- === Заключительный CTA === -->
+<!-- CTA -->
 <section class="cta-section" style="background: linear-gradient(135deg, #6ec1e4, #4a90e2); color: white; text-align: center; padding: 70px 20px;">
   <h2 style="font-size: 2rem; margin-bottom: 10px;">Присоединяйся к <span style="font-weight:700;">Oqualani!</span></h2>
   <p style="font-size: 1.1rem; margin-bottom: 25px;">Начни свой путь к знаниям и развитию уже сегодня 🚀</p>
   <a href="#contact-form" style="background: white; color: #4a90e2; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: all 0.3s;">Получить консультацию</a>
 </section>
 
-<!-- === Футер === -->
+<!-- Футер -->
 <footer style="background: #f9fafb; color: #333; padding: 60px 20px; position: relative;">
   <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
-
-    <!-- Форма обратной связи -->
     <div>
       <h3 style="color: #4a90e2;">Свяжитесь с нами</h3>
       <form id="contact-form" style="margin-top: 15px;">
@@ -165,34 +236,25 @@ header .logo p {margin:0; font-size:14px; opacity:0.8;}
         <button type="submit" style="width: 100%; background: #4a90e2; color: white; border: none; padding: 14px; border-radius: 8px; cursor: pointer; font-weight: bold; transition: background 0.3s;">Получить консультацию</button>
       </form>
     </div>
-
-    <!-- Контактная информация -->
     <div>
       <h3 style="color: #4a90e2;">Контакты</h3>
       <p>📞 Телефон: +7-776-930-00-30</p>
       <p>✉️ Email: ayauly_jan@list.ru</p>
       <p>📍 Баймаханова Назерке</p>
-      <div style="margin-top: 12px;">
-        <a href="#" style="margin-right: 10px; color: #4a90e2; text-decoration: none; font-weight:500;">Instagram</a> |
-        <a href="#" style="margin-left: 10px; color: #4a90e2; text-decoration: none; font-weight:500;">TikTok</a>
-      </div>
     </div>
-
-    <!-- Полезные ссылки -->
     <div>
       <h3 style="color: #4a90e2;">Полезные ссылки</h3>
       <ul style="list-style: none; padding: 0; margin-top: 15px;">
         <li><a href="#" style="color: #333; text-decoration: none;">Политика конфиденциальности</a></li>
-        <li><a href="#" style="color: #333; text-decoration: none;">FAQ (Часто задаваемые вопросы)</a></li>
+        <li><a href="#" style="color: #333; text-decoration: none;">FAQ</a></li>
       </ul>
     </div>
   </div>
-
   <hr style="margin: 40px 0; border: none; border-top: 1px solid #ddd;">
   <p style="text-align: center; color: #888;">© 2025 Oqualani. Все права защищены.</p>
 </footer>
 
-<!-- === Модальное окно подтверждения === -->
+<!-- Модальное окно -->
 <div id="modal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); justify-content: center; align-items: center; z-index: 1000; animation: fadeIn 0.3s;">
   <div style="background: white; border-radius: 12px; padding: 30px; text-align: center; width: 320px; transform: scale(0.9); opacity: 0; animation: scaleIn 0.4s forwards;">
     <h3 style="color: #4a90e2;">✅ Заявка отправлена!</h3>
@@ -202,17 +264,9 @@ header .logo p {margin:0; font-size:14px; opacity:0.8;}
 </div>
 
 <style>
-@keyframes fadeIn {
-  from {opacity: 0;} 
-  to {opacity: 1;}
-}
-@keyframes scaleIn {
-  from {transform: scale(0.9); opacity: 0;} 
-  to {transform: scale(1); opacity: 1;}
-}
-button:hover {
-  background: #357abd !important;
-}
+@keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
+@keyframes scaleIn {from {transform: scale(0.9); opacity: 0;} to {transform: scale(1); opacity: 1;}}
+button:hover {background: #357abd !important;}
 </style>
 
 <script>
@@ -225,22 +279,12 @@ form.addEventListener('submit', (e) => {
   form.reset();
 });
 
-function closeModal() {
-  modal.style.display = 'none';
-}
-
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) closeModal();
-});
+function closeModal() { modal.style.display = 'none'; }
+modal.addEventListener('click', (e) => { if(e.target===modal) closeModal(); });
 </script>
-
 
 <script>
 let activeUser = JSON.parse(localStorage.getItem('activeUser')||'null');
-if(!activeUser){ alert("Сначала войдите!"); location.href='login.html'; }
-
-const USERS_KEY = 'users';
-let users = JSON.parse(localStorage.getItem(USERS_KEY)||'{}');
 
 const totalLevels = 2; 
 const container = document.getElementById('levelsContainer');
@@ -258,7 +302,7 @@ for(let i=0;i<totalLevels;i++){
   const barFill = document.createElement('div');
   barFill.className='progress-bar-fill';
   
-  let percent = (activeUser.results && activeUser.results[i])||0;
+  let percent = (activeUser && activeUser.results && activeUser.results[i]) || 0;
   barFill.classList.add(percent>=65?'green':'yellow');
   barFill.style.width='0';
   barFill.textContent = percent+'%';
@@ -267,12 +311,10 @@ for(let i=0;i<totalLevels;i++){
   card.appendChild(levelTitle);
   card.appendChild(barBg);
 
-  if(i===0){
-    card.classList.add('pulse');
-    card.addEventListener('click',()=>{ location.href='test.html'; });
-  } else if(i===1 && activeUser.results && activeUser.results[0]>=65){
-    card.classList.add('pulse');
-    card.addEventListener('click',()=>{ location.href='test2.html'; });
+  if(activeUser){
+    if(i===0){ card.classList.add('pulse'); card.addEventListener('click',()=>{ location.href='test.html'; }); }
+    else if(i===1 && activeUser.results[0]>=65){ card.classList.add('pulse'); card.addEventListener('click',()=>{ location.href='test2.html'; }); }
+    else { card.classList.add('disabled'); }
   } else {
     card.classList.add('disabled');
   }
